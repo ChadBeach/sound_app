@@ -3,13 +3,27 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Cool Project</title>
+    <title>Sound App</title>
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/main.css">
   </head>
   <body>
     <div class="container">
-      <p>Welcome to your life.</p>
+      <h1>Really Awesome Music Site</h1>
+      <audio class="play" autoplay="autoplay" controls="controls">
+   <source src="music.ogg" />
+   <source src="music.mp3" />
+</audio>
+<form role="search" method="get" id="searchform"
+    class="searchform" action="<?php echo esc_url( home_url( '/' ) ); ?>">
+    <div>
+        <label class="screen-reader-text" for="s"><?php _x( 'Search for:', 'label' ); ?></label>
+        <input class="s_artist" type="text" value="Search for Artist" name="s" id="s" />
+        <input type="submit" id="searchsubmit"
+            value="Search" />
+    </div>
+</form>
+      <p></p>
     </div>
     <script src="js/bundle.js"></script>
   </body>
