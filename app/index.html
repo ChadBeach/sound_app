@@ -8,22 +8,29 @@
     <link rel="stylesheet" href="css/main.css">
   </head>
   <body>
+
     <div class="container">
-      <h1>Really Awesome Music Site</h1>
-      <audio class="play" autoplay="autoplay" controls="controls">
-   <source src="music.ogg" />
-   <source src="music.mp3" />
-</audio>
-<form role="search" method="get" id="searchform"
-    class="searchform" action="<?php echo esc_url( home_url( '/' ) ); ?>">
+      <h1>
+
+
+<form role="search" method="get" id="searchform">
     <div>
-        <label class="screen-reader-text" for="s"><?php _x( 'Search for:', 'label' ); ?></label>
-        <input class="s_artist" type="text" value="Search for Artist" name="s" id="s" />
-        <input type="submit" id="searchsubmit"
-            value="Search" />
+        <label class="screen-reader-text"></label>
+        <input class="s_artist" type="text" value="Search Artist" />
+        <input class="search" type="submit" value="Search" />
     </div>
 </form>
-      <p></p>
+</h1>
+<div class="search_box"</div>
+<div class="audio">
+<audio src="https://api.soundcloud.com/tracks/75263346/stream?client_id=2465b6169896837c228b85a0d5494d70"  autoloop loop controls></audio>
+</div>
+<!-- <audio class="play" controls="controls">
+<source src="https://api.soundcloud.com/tracks/stream?client_id=2465b6169896837c228b85a0d5494d70"></source>
+</audio> -->
+
+
+      <div class="results"></div>
     </div>
     <script src="js/bundle.js"></script>
   </body>
